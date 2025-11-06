@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Music & Art – Portfolio</title>
+  <style>
+    :root {
+      --header: #0f172a;
+      --nav: #111827;
+      --section: #0b1326;
+      --article: #101a35;
+      --footer: #0a1022;
+      --text: #e5eaf3;
+      --muted: #a9b2c3;
+      --accent: #60a5fa;
+      --border: #1f2a49;
+    }
+    * { box-sizing: border-box; }
+    body { margin:0; font-family: Inter, system-ui, Segoe UI, Roboto; color: var(--text); }
+    header, nav, section, article, footer { padding: 16px; }
+    header { background: var(--header); }
+    nav { background: var(--nav); position: sticky; top: 0; z-index: 10; }
+    section { background: var(--section); }
+    article { background: var(--article); border: 1px solid var(--border); border-radius: 12px; }
+    footer { background: var(--footer); color: var(--muted); }
+    .wrap { width: min(1100px, 94%); margin: 0 auto; }
+    nav a { color: var(--text); text-decoration: none; margin-right: 12px; padding: 8px 10px; border-radius: 8px; }
+    nav a:hover { background: #0e1630; }
+    .grid { display: grid; gap: 14px; grid-template-columns: 1fr 1fr; }
+    @media (max-width: 900px) { .grid { grid-template-columns: 1fr; } }
+    img.resp { width: 100%; height: auto; border-radius: 12px; border: 1px solid var(--border); }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap">
+      <h1>My Music & Art Portfolio</h1>
+      <p class="lead" style="color:#b8c3d7;">Showcasing selected projects and interests.</p>
+    </div>
+  </header>
+
+  <nav>
+    <div class="wrap">
+      <a href="#intro">Intro</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </nav>
+
+  <main class="wrap">
+    <section id="intro" style="margin-top: 12px;">
+      <h2>Introduction</h2>
+      <p>
+        Welcome! I explore sound design and visual storytelling. This site highlights recent works and experiments.
+      </p>
+      <img class="resp" src="https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?q=80&w=1200&auto=format&fit=crop" alt="Studio workspace" />
+    </section>
+
+    <section id="projects" style="margin-top:14px;">
+      <h2>Projects</h2>
+      <div class="grid">
+        <article>
+          <h3 style="margin-top:0;">Ambient EP</h3>
+          <p>Textures and field recordings layered into calming pieces.</p>
+          <img class="resp" src="https://images.unsplash.com/photo-1507838153414-b4b713384a76?q=80&w=1200&auto=format&fit=crop" alt="Music project" />
+          <p><a href="music.html" style="color:var(--accent);">Listen to tracks →</a></p>
+        </article>
+        <article>
+          <h3 style="margin-top:0;">Vector City</h3>
+          <p>Minimal SVG illustrations of urban skylines.</p>
+          <img class="resp" src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?q=80&w=1200&auto=format&fit=crop" alt="Art project" />
+          <p><a href="art.html" style="color:var(--accent);">See the artwork →</a></p>
+        </article>
+      </div>
+    </section>
+
+    <section id="contact" style="margin-top:14px;">
+      <h2>Contact</h2>
+      <p>Email me at <a href="#" style="color:var(--accent);">your.name@example.com</a></p>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">© 2025 Your Name</div>
+  </footer>
+</body>
+</html>

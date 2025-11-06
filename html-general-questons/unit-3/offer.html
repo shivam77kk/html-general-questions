@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Discount Offer – 50% OFF Today!</title>
+  <style>
+    :root {
+      --from: #0ea5e9;
+      --to: #9333ea;
+      --text: #0b1020;
+      --glow: rgba(255,255,255,.35);
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin:0; min-height: 100svh;
+      background: linear-gradient(135deg, #0e1325, #0a0f1c);
+      display: grid; place-items: center; font-family: Inter, system-ui, Segoe UI, Roboto;
+    }
+    .banner {
+      width: min(900px, 92%);
+      background: linear-gradient(135deg, var(--from), var(--to));
+      color: white;
+      border-radius: 18px;
+      padding: clamp(18px, 4vw, 28px);
+      box-shadow: 0 30px 80px rgba(62,0,120,.35), inset 0 0 0 1px rgba(255,255,255,.15);
+      text-align: center;
+      border: 1px solid rgba(255,255,255,.2);
+    }
+    .blink {
+      font-size: clamp(2rem, 5vw, 3rem);
+      font-weight: 900;
+      letter-spacing: 0.5px;
+      animation: blink 1.2s infinite steps(1);
+      text-shadow: 0 0 24px var(--glow);
+    }
+    @keyframes blink {
+      50% { opacity: 0.35; transform: scale(0.99); }
+    }
+    .sub { margin-top: 8px; font-size: clamp(1rem, 2.2vw, 1.25rem); opacity: 0.95; }
+    .cta {
+      margin-top: 16px; display: inline-block; padding: 12px 16px; border-radius: 12px; background: white; color: #0f172a; font-weight: 800;
+      text-decoration: none; transition: all .2s ease;
+    }
+    .cta:hover { transform: translateY(-2px); color: #111827; box-shadow: 0 10px 30px rgba(0,0,0,.25); }
+    .cta:hover .blink { transform: scale(1.02); }
+    .cta:active { transform: translateY(0); }
+    .hover-grow { transition: all .25s ease; display: inline-block; }
+    .hover-grow:hover { transform: scale(1.05); }
+  </style>
+</head>
+<body>
+  <div class="banner">
+    <div class="blink">🔥 50% OFF Today!</div>
+    <div class="sub">Limited time offer on selected items. Hurry up!</div>
+    <a class="cta hover-grow" href="#">Shop Now</a>
+  </div>
+</body>
+</html>

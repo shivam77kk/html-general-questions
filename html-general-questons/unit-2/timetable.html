@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>College Timetable</title>
+  <style>
+    :root {
+      --bg: #0f172a;
+      --text: #e2e8f0;
+      --muted: #aab6c5;
+      --border: #233251;
+      --head: #1d2b57;
+      --accent: #60a5fa;
+      --card: #121a34;
+    }
+    * { box-sizing: border-box; }
+    body { margin:0; background: linear-gradient(180deg, #0e162f, #0a1124); color: var(--text); font-family: Inter, system-ui, Segoe UI, Roboto; }
+    .container { width: min(1100px, 94%); margin: 0 auto; padding: 28px 0 56px; }
+    header { text-align: center; margin-bottom: 14px; }
+    h1 { margin:0; font-size: clamp(1.6rem, 2.5vw + 1rem, 2.6rem); }
+    p.lead { color: var(--muted); }
+    .card { background: var(--card); border: 1px solid var(--border); border-radius: 14px; padding: 16px; }
+    table { width:100%; border-collapse: collapse; }
+    thead th {
+      background: linear-gradient(90deg, #1e2f68, #1b2858);
+      color: #eaf0ff; padding: 10px; border-bottom: 2px solid #2f3d68; text-align: left;
+    }
+    tbody td, tbody th {
+      border-top: 1px solid var(--border); padding: 10px; vertical-align: middle;
+    }
+    tbody tr:nth-child(even) td { background: #0f1731; }
+    .period { color: var(--accent); font-weight: 700; }
+    footer { margin-top: 18px; border-top: 1px dashed var(--border); padding-top: 12px; color: var(--muted); text-align: right; }
+    .legend { margin-top: 10px; color: var(--muted); }
+    .scroll { overflow: auto; border-radius: 12px; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>College Timetable</h1>
+      <p class="lead">Weekly schedule with 5 days and 6 periods.</p>
+    </header>
+
+    <div class="card scroll">
+      <table>
+        <thead>
+          <tr>
+            <th>Day</th>
+            <th class="period">Period 1</th>
+            <th class="period">Period 2</th>
+            <th class="period">Period 3</th>
+            <th class="period">Period 4</th>
+            <th class="period">Period 5</th>
+            <th class="period">Period 6</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th>Monday</th>
+            <td>Maths</td>
+            <td>Physics</td>
+            <td colspan="2" style="background:#132356;">Programming Lab</td>
+            <td>English</td>
+            <td>Sports</td>
+          </tr>
+          <tr>
+            <th>Tuesday</th>
+            <td>Data Structures</td>
+            <td>Chemistry</td>
+            <td>Electronics</td>
+            <td>Free</td>
+            <td rowspan="2" style="background:#14305a;">Workshop</td>
+            <td>Library</td>
+          </tr>
+          <tr>
+            <th>Wednesday</th>
+            <td>Computer Networks</td>
+            <td>Discrete Math</td>
+            <td>DBMS</td>
+            <td>OS</td>
+            <td>PE</td>
+          </tr>
+          <tr>
+            <th>Thursday</th>
+            <td>AI</td>
+            <td>Algorithms</td>
+            <td>English</td>
+            <td>Project</td>
+            <td>Free</td>
+            <td>Maths</td>
+          </tr>
+          <tr>
+            <th>Friday</th>
+            <td>DBMS</td>
+            <td>Networks</td>
+            <td>Lab</td>
+            <td>Seminar</td>
+            <td>Placement</td>
+            <td>Club</td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="legend">Note: Colored cells indicate long lectures using colspan/rowspan.</div>
+    </div>
+
+    <footer>Created by Your Name</footer>
+  </div>
+</body>
+</html>

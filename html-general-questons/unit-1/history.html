@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>History of the Internet</title>
+  <style>
+    :root {
+      --bg: #0e1117;
+      --card: #161b22;
+      --text: #e6edf3;
+      --muted: #9aa4b2;
+      --accent: #2f81f7;
+      --accent-2: #34d399;
+      --border: #2a2f3a;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji";
+      background: linear-gradient(180deg, #0e1117, #0a0d12);
+      color: var(--text);
+      line-height: 1.65;
+    }
+    .container {
+      width: min(1100px, 92%);
+      margin: 0 auto;
+      padding: 24px 0 56px;
+    }
+    header {
+      text-align: center;
+      padding: 24px 0 8px;
+    }
+    h1 {
+      font-size: clamp(1.8rem, 2.5vw + 1rem, 3rem);
+      margin: 0 0 8px;
+      letter-spacing: 0.3px;
+    }
+    p.lead { color: var(--muted); margin-top: 0; }
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 20px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.35);
+    }
+    .grid {
+      display: grid;
+      gap: 20px;
+    }
+    .hero {
+      display: grid;
+      gap: 16px;
+      grid-template-columns: 1.2fr 1fr;
+      align-items: center;
+    }
+    .hero img {
+      width: 100%;
+      height: auto;
+      border-radius: 12px;
+      border: 1px solid var(--border);
+    }
+    @media (max-width: 800px) {
+      .hero { grid-template-columns: 1fr; }
+    }
+    h2 {
+      margin-top: 6px;
+      font-size: 1.25rem;
+      color: #e9eef7;
+    }
+    ul.milestones {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    ul.milestones li {
+      padding: 12px 14px;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      margin-bottom: 10px;
+      background: #12161c;
+      display: grid;
+      grid-template-columns: 110px 1fr;
+      gap: 14px;
+    }
+    .year {
+      font-weight: 700;
+      color: var(--accent);
+    }
+    footer {
+      margin-top: 28px;
+      padding-top: 18px;
+      border-top: 1px dashed var(--border);
+      color: var(--muted);
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px 20px;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.95rem;
+    }
+    .tag {
+      background: #0f141b;
+      border: 1px solid var(--border);
+      padding: 6px 10px;
+      border-radius: 999px;
+      color: var(--accent-2);
+    }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>History of the Internet</h1>
+      <p class="lead">From ARPANET to today’s global web of information and services.</p>
+    </header>
+
+    <section class="grid">
+      <div class="card hero">
+        <div>
+          <h2>From Research Networks to the World Wide Web</h2>
+          <p>
+            The Internet began as <b>ARPANET</b> in 1969, a U.S. research project connecting
+            a handful of universities for resilient communication. Over decades, standards
+            such as <b>TCP/IP</b> (1983) enabled different networks to interconnect, forming
+            the modern Internet. In 1991, Tim Berners‑Lee introduced the <b>World Wide Web</b>,
+            making information sharing accessible with browsers, pages, and hyperlinks.
+          </p>
+          <p>
+            Since then, broadband, mobile, cloud computing, and rich web apps have expanded
+            the Internet’s reach to billions of devices—powering education, commerce, social
+            networks, and entertainment worldwide.
+          </p>
+        </div>
+        <img src="https://images.unsplash.com/photo-1541079602156-16cf9b7bd56f?q=80&w=1400&auto=format&fit=crop" alt="Old computer vs. modern laptop montage" />
+      </div>
+
+      <div class="card">
+        <h2>Key Milestones</h2>
+        <ul class="milestones">
+          <li><span class="year">1969</span> <span>ARPANET sends the first message between UCLA and SRI.</span></li>
+          <li><span class="year">1971</span> <span>First email program by Ray Tomlinson popularizes network messaging.</span></li>
+          <li><span class="year">1983</span> <span>Transition to <b>TCP/IP</b>, defining the core Internet protocol suite.</span></li>
+          <li><span class="year">1990</span> <span>ARPANET decommissions; the term “Internet” sees broad adoption.</span></li>
+          <li><span class="year">1991</span> <span>Tim Berners‑Lee launches the <b>World Wide Web</b> at CERN.</span></li>
+          <li><span class="year">2000</span> <span>Dot‑com era; broadband grows and dynamic web apps emerge.</span></li>
+          <li><span class="year">2007</span> <span>Smartphones drive the mobile Internet revolution.</span></li>
+          <li><span class="year">2010s</span> <span>Cloud, streaming, and social platforms scale globally.</span></li>
+          <li><span class="year">2020s</span> <span>Edge, 5G, AI‑powered services, and IoT proliferate.</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <footer>
+      <span class="tag">Travel Explorer – Learn About the Internet World</span>
+      <span>Created by Your Name • Date: 2025-11-06</span>
+    </footer>
+  </div>
+</body>
+</html>

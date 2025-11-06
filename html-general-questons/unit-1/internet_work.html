@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>How the Internet Works</title>
+  <style>
+    :root {
+      --bg: #0b0f16;
+      --card: #121826;
+      --text: #e9eef6;
+      --muted: #a8b3c7;
+      --border: #243049;
+      --accent: #5da8ff;
+      --ok: #34d399;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0; font-family: Inter, system-ui, Segoe UI, Roboto;
+      background: linear-gradient(180deg, #0a0f19, #070b12);
+      color: var(--text);
+    }
+    .container { width: min(1100px, 94%); margin: 0 auto; padding: 28px 0 56px; }
+    header { text-align: center; margin-bottom: 18px; }
+    h1 { margin: 0; font-size: clamp(1.8rem, 2.5vw + 1rem, 3rem); }
+    p.lead { color: var(--muted); }
+    .card { background: var(--card); border: 1px solid var(--border); border-radius: 14px; padding: 18px; }
+    .diagram {
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-bottom: 14px;
+      align-items: center; text-align: center;
+    }
+    .diagram .node {
+      border: 1px solid var(--border); background: #0f1524; border-radius: 12px; padding: 12px;
+    }
+    .diagram img { width: 64px; height: 64px; display: block; margin: 0 auto 8px; filter: invert(85%); }
+    .arrow { font-size: 1.6rem; color: var(--accent); }
+    @media (max-width: 800px) {
+      .diagram { grid-template-columns: 1fr; }
+      .arrow { transform: rotate(90deg); }
+    }
+    ol { margin: 0; padding-left: 20px; }
+    ol li { margin: 10px 0; }
+    b { color: #f0f6ff; }
+    iframe { width: 100%; aspect-ratio: 16/9; border: 1px solid var(--border); border-radius: 12px; }
+    footer { margin-top: 22px; border-top: 1px dashed var(--border); padding-top: 12px; color: var(--muted); display: flex; justify-content: space-between; flex-wrap: wrap; }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>How the Internet Works</h1>
+      <p class="lead">A quick look at the client–server model and how a webpage is delivered.</p>
+    </header>
+
+    <section class="card">
+      <div class="diagram">
+        <div class="node">
+          <img src="https://img.icons8.com/ios-filled/100/monitor.png" alt="Client icon" />
+          <div><b>Client</b> (Your Browser)</div>
+        </div>
+        <div class="arrow">➡️</div>
+        <div class="node">
+          <img src="https://img.icons8.com/ios-filled/100/server.png" alt="Server icon" />
+          <div><b>Web Server</b> (Hosts Websites)</div>
+        </div>
+      </div>
+      <ol>
+        <li>You type a <b>URL</b> into the browser (e.g., https://example.com).</li>
+        <li>DNS translates the domain to an IP address of the <b>Web Server</b>.</li>
+        <li>Your browser sends an <b>HTTP</b>/<b>HTTPS</b> request for a page.</li>
+        <li>The server processes the request and responds with <b>HTML</b>, <b>CSS</b>, and <b>JS</b>.</li>
+        <li>The browser parses HTML, downloads assets, applies CSS, runs JS, and renders the page.</li>
+        <li>Subsequent requests fetch images, styles, and data as needed.</li>
+      </ol>
+    </section>
+
+    <section class="card" style="margin-top:14px;">
+      <h2 style="margin-top:0;">Short Video</h2>
+      <p class="lead" style="margin-top:4px;">Learn more with this concise explainer:</p>
+      <iframe src="https://www.youtube.com/embed/7_LPdttKXPc" title="How the Internet Works" allowfullscreen></iframe>
+    </section>
+
+    <footer>
+      <span>Created by Your Name • Date: 2025-11-06</span>
+      <span>Travel Explorer</span>
+    </footer>
+  </div>
+</body>
+</html>

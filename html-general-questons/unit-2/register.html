@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Student Registration Form</title>
+  <style>
+    :root {
+      --bg: #0d1b1e;
+      --panel: #13292e;
+      --text: #e7f4f6;
+      --muted: #a7c4c8;
+      --border: #21464d;
+      --accent: #38bdf8;
+      --ok: #22c55e;
+      --warn: #f59e0b;
+    }
+    * { box-sizing: border-box; }
+    body { margin: 0; background: radial-gradient(1200px 600px at -10% -10%, #13333a 0, transparent 55%), #0a191c; color: var(--text); font-family: Inter, system-ui, Segoe UI, Roboto; }
+    .container { width: min(900px, 94%); margin: 0 auto; padding: 28px 0 56px; }
+    header { text-align: center; margin-bottom: 12px; }
+    h1 { margin: 0; font-size: clamp(1.6rem, 2vw + 1rem, 2.4rem); }
+    p.lead { color: var(--muted); margin: 8px 0 0; }
+    form { background: var(--panel); border: 1px solid var(--border); border-radius: 16px; padding: 18px; }
+    fieldset { border: 1px dashed var(--border); border-radius: 12px; padding: 14px; margin: 0; }
+    legend { padding: 6px 10px; border-radius: 999px; background: #0f2b31; border: 1px solid var(--border); color: var(--accent); }
+    .grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; }
+    @media (max-width: 700px) { .grid { grid-template-columns: 1fr; } }
+    label { display: block; font-weight: 600; margin-bottom: 6px; }
+    input[type="text"], input[type="email"], input[type="password"], select {
+      width: 100%; padding: 10px 12px; border: 1px solid var(--border); border-radius: 10px; background: #0e2429; color: var(--text);
+    }
+    .row { display: grid; gap: 8px; }
+    .inline { display: flex; flex-wrap: wrap; gap: 14px 20px; }
+    .inline label { font-weight: 500; }
+    .actions { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 12px; }
+    button {
+      padding: 10px 14px; border-radius: 10px; border: 1px solid var(--border); cursor: pointer; background: #0f2b31; color: var(--text); font-weight: 600;
+      transition: transform .15s ease, background .2s ease, color .2s ease;
+    }
+    button[type="submit"] { background: #0f2b31; color: var(--ok); }
+    button[type="reset"] { background: #2a1d0a; color: #fbbf24; }
+    button:hover { transform: translateY(-1px); }
+    footer { margin-top: 20px; color: var(--muted); display: flex; justify-content: space-between; flex-wrap: wrap; border-top: 1px dashed var(--border); padding-top: 12px; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Student Registration Form</h1>
+      <p class="lead">Please fill the required details to register.</p>
+    </header>
+
+    <form action="#" method="post" novalidate>
+      <fieldset>
+        <legend>Basic Details</legend>
+        <div class="grid">
+          <div class="row">
+            <label for="name">Name</label>
+            <input id="name" name="name" type="text" placeholder="Full Name" required />
+          </div>
+          <div class="row">
+            <label for="roll">Roll No</label>
+            <input id="roll" name="roll" type="text" placeholder="e.g. 23CS1001" required />
+          </div>
+          <div class="row">
+            <label>Gender</label>
+            <div class="inline" role="group" aria-label="Gender">
+              <label><input type="radio" name="gender" value="male" /> Male</label>
+              <label><input type="radio" name="gender" value="female" /> Female</label>
+              <label><input type="radio" name="gender" value="other" /> Other</label>
+            </div>
+          </div>
+          <div class="row">
+            <label for="dept">Department</label>
+            <select id="dept" name="department" required>
+              <option value="">Select Department</option>
+              <option>Computer Science</option>
+              <option>Electronics</option>
+              <option>Mechanical</option>
+              <option>Civil</option>
+              <option>Electrical</option>
+            </select>
+          </div>
+          <div class="row">
+            <label>Hobbies</label>
+            <div class="inline">
+              <label><input type="checkbox" name="hobbies" value="reading" /> Reading</label>
+              <label><input type="checkbox" name="hobbies" value="sports" /> Sports</label>
+              <label><input type="checkbox" name="hobbies" value="music" /> Music</label>
+              <label><input type="checkbox" name="hobbies" value="coding" /> Coding</label>
+            </div>
+          </div>
+          <div class="row">
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" placeholder="you@example.com" required />
+          </div>
+          <div class="row">
+            <label for="pwd">Password</label>
+            <input id="pwd" name="password" type="password" placeholder="Enter a strong password" required />
+          </div>
+        </div>
+      </fieldset>
+
+      <div class="actions">
+        <button type="submit">Submit</button>
+        <button type="reset">Reset</button>
+      </div>
+    </form>
+
+    <footer>
+      <span>My College Portal</span>
+      <span>Created by Your Name • Date: 2025-11-06</span>
+    </footer>
+  </div>
+</body>
+</html>

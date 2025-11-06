@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Popular Search Engines</title>
+  <style>
+    :root {
+      --bg: #0f1220;
+      --card: #14182b;
+      --text: #e7ecf3;
+      --muted: #a2adc0;
+      --border: #232943;
+      --accent: #7c9cf4;
+      --chip: #1a1f36;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Inter, system-ui, Segoe UI, Roboto, Arial;
+      color: var(--text);
+      background: radial-gradient(1200px 600px at 20% -10%, #1c2140 0, transparent 60%),
+                  radial-gradient(1000px 600px at 120% 20%, #1b264b 0, transparent 55%),
+                  #0b0e1a;
+    }
+    .container { width: min(1100px, 94%); margin: 0 auto; padding: 28px 0 56px; }
+    header { text-align: center; margin-bottom: 16px; }
+    h1 { margin: 0; font-size: clamp(1.8rem, 2.5vw + 1rem, 3rem); }
+    p.lead { color: var(--muted); margin-top: 10px; }
+    .card { background: var(--card); border: 1px solid var(--border); border-radius: 14px; padding: 18px; }
+    table { width: 100%; border-collapse: collapse; }
+    thead th {
+      background: #192048;
+      color: #eaf0ff;
+      padding: 12px;
+      text-align: left;
+      position: sticky; top: 0;
+    }
+    tbody td {
+      border-top: 1px solid var(--border);
+      padding: 12px;
+      vertical-align: middle;
+    }
+    .engine {
+      display: flex; align-items: center; gap: 10px; font-weight: 600;
+    }
+    .engine img {
+      width: 28px; height: 28px; border-radius: 6px; background: #fff;
+    }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .chips { display: flex; flex-wrap: wrap; gap: 8px; }
+    .chip { background: var(--chip); border: 1px solid var(--border); padding: 6px 10px; border-radius: 999px; color: #b7c6ff; font-size: 0.9rem; }
+    footer {
+      margin-top: 22px; border-top: 1px dashed var(--border); padding-top: 12px; color: var(--muted);
+      display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px;
+    }
+    .table-wrap { overflow: auto; border-radius: 12px; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Popular Search Engines</h1>
+      <p class="lead">Compare features, privacy approach, and strengths.</p>
+    </header>
+
+    <div class="card table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Engine</th>
+            <th>Main Website</th>
+            <th>Key Features</th>
+            <th>Focus</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="engine">
+              <img src="https://www.google.com/favicon.ico" alt="Google logo" /> Google
+            </td>
+            <td><a href="https://www.google.com" target="_blank" rel="noopener">google.com</a></td>
+            <td class="chips">
+              <span class="chip">Best-in-class relevance</span>
+              <span class="chip">Knowledge Graph</span>
+              <span class="chip">Maps & Images</span>
+            </td>
+            <td>Speed, breadth, AI answers</td>
+          </tr>
+          <tr>
+            <td class="engine">
+              <img src="https://www.bing.com/sa/simg/favicon-2x.ico" alt="Bing logo" /> Bing
+            </td>
+            <td><a href="https://www.bing.com" target="_blank" rel="noopener">bing.com</a></td>
+            <td class="chips">
+              <span class="chip">Image & video discovery</span>
+              <span class="chip">Rewards program</span>
+              <span class="chip">AI chat</span>
+            </td>
+            <td>Visual search, integrations</td>
+          </tr>
+          <tr>
+            <td class="engine">
+              <img src="https://www.yahoo.com/favicon.ico" alt="Yahoo logo" /> Yahoo
+            </td>
+            <td><a href="https://www.yahoo.com" target="_blank" rel="noopener">yahoo.com</a></td>
+            <td class="chips">
+              <span class="chip">Portal content</span>
+              <span class="chip">News & finance</span>
+            </td>
+            <td>All-in-one homepage</td>
+          </tr>
+          <tr>
+            <td class="engine">
+              <img src="https://duckduckgo.com/favicon.ico" alt="DuckDuckGo logo" /> DuckDuckGo
+            </td>
+            <td><a href="https://duckduckgo.com" target="_blank" rel="noopener">duckduckgo.com</a></td>
+            <td class="chips">
+              <span class="chip">No tracking</span>
+              <span class="chip">!bang shortcuts</span>
+              <span class="chip">Privacy tools</span>
+            </td>
+            <td>Privacy-first search</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="card" style="margin-top: 16px;">
+      <h2 style="margin-top:0;">Which one I prefer and why?</h2>
+      <p style="color:#c4cee0;">
+        I prefer <b>DuckDuckGo</b> for everyday use due to its privacy-friendly approach and fast, distraction‑free results. For developer queries or maps, I often use <b>Google</b> because of its comprehensive index and rich results.
+      </p>
+    </div>
+
+    <footer>
+      <span>Created by Your Name • Date: 2025-11-06</span>
+      <span>Travel Explorer</span>
+    </footer>
+  </div>
+</body>
+</html>

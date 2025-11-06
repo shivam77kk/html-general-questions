@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>About Our College</title>
+  <style>
+    :root {
+      --bg: #0e141b;
+      --card: #131a23;
+      --text: #e8eef5;
+      --muted: #a6b3c3;
+      --border: #233040;
+      --accent: #8bafff;
+      --mark-bg: #fffb91;
+    }
+    * { box-sizing: border-box; }
+    body { margin:0; background: radial-gradient(900px 500px at 0% -10%, #1c2740 0, transparent 55%), #0a1016; color: var(--text); font-family: Inter, system-ui, Segoe UI, Roboto; }
+    .container { width: min(1000px, 94%); margin:0 auto; padding: 28px 0 56px; }
+    header { text-align: center; margin-bottom: 10px; }
+    h1 { margin:0; font-size: clamp(1.6rem, 2.2vw + 1rem, 2.4rem); }
+    .card { background: var(--card); border: 1px solid var(--border); border-radius: 14px; padding: 18px; }
+    img.hero { width: 100%; height: auto; border-radius: 12px; border: 1px solid var(--border); }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    blockquote {
+      margin: 14px 0 0; padding: 14px 16px; border-left: 4px solid var(--accent);
+      background: #101722; color: #d8e2f2; border-radius: 8px;
+    }
+    footer { margin-top: 18px; border-top: 1px dashed var(--border); padding-top: 12px; color: var(--muted); display: flex; justify-content: space-between; flex-wrap: wrap; }
+    .tools b, .tools i, .tools u { color: #f0f5ff; }
+    mark { background: var(--mark-bg); color: #111827; padding: 0 4px; border-radius: 4px; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header><h1>About Our College</h1></header>
+
+    <div class="card">
+      <img class="hero" src="https://images.unsplash.com/photo-1588072432836-e10032774350?q=80&w=1400&auto=format&fit=crop" alt="College campus image" />
+      <p class="tools" style="margin-top:12px;">
+        Welcome to <b>Our College</b>, a place for <i>innovation</i>, <u>excellence</u>, and community. We offer modern labs, dedicated faculty, and vibrant clubs. Our mission is to nurture curiosity and build leaders. Admissions are now <mark>open</mark> for the new academic year.
+      </p>
+      <blockquote>“Education is the most powerful weapon which you can use to change the world.” — Nelson Mandela</blockquote>
+      <p style="margin-top:12px;">
+        Check our <a href="timetable.html">College Timetable</a> for the latest schedule.
+      </p>
+    </div>
+
+    <footer>
+      <span>My College Portal</span>
+      <span>Created by Your Name • Date: 2025-11-06</span>
+    </footer>
+  </div>
+</body>
+</html>
